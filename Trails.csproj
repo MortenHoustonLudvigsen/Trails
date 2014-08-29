@@ -53,11 +53,87 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="karma.conf.js" />
+    <Content Include="src\Constraints.js">
+      <DependentUpon>Constraints.ts</DependentUpon>
+    </Content>
+    <Content Include="test\require.config.js" />
+    <Content Include="test\SpecRunner.browser.js">
+      <DependentUpon>SpecRunner.browser.ts</DependentUpon>
+    </Content>
+    <Content Include="test\SpecRunner.karma.js">
+      <DependentUpon>SpecRunner.karma.ts</DependentUpon>
+    </Content>
+    <Content Include="test\src\ConstraintTests.js">
+      <DependentUpon>ConstraintTests.ts</DependentUpon>
+    </Content>
+    <Content Include="test\src\TestFile1.js">
+      <DependentUpon>TestFile1.ts</DependentUpon>
+    </Content>
+    <Content Include="test\tests.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\Constraints.ts" />
+    <TypeScriptCompile Include="src\references.d.ts" />
+    <TypeScriptCompile Include="test\references.d.ts" />
+    <TypeScriptCompile Include="test\SpecRunner.browser.ts" />
+    <TypeScriptCompile Include="test\SpecRunner.karma.ts" />
+    <TypeScriptCompile Include="test\src\ConstraintTests.ts" />
+    <TypeScriptCompile Include="test\src\TestFile1.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\src\TestFile1.js.map">
+      <DependentUpon>TestFile1.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tsd.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="karma-vs-reporter.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\SpecRunner.karma.js.map">
+      <DependentUpon>SpecRunner.karma.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="test\SpecRunner.browser.js.map">
+      <DependentUpon>SpecRunner.browser.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="test\src\ConstraintTests.js.map">
+      <DependentUpon>ConstraintTests.ts</DependentUpon>
+    </Content>
+    <Content Include="bower.json" />
+    <Content Include="tslint.json" />
+    <Content Include="typings\tslint.json" />
+    <Content Include="src\Constraints.js.map">
+      <DependentUpon>Constraints.ts</DependentUpon>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

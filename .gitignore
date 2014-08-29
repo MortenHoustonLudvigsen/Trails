@@ -6,6 +6,10 @@
 *.user
 *.sln.docstates
 
+# Node modules
+node_modules/
+bower_components/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

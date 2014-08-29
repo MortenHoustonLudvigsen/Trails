@@ -1,0 +1,23 @@
+{
+  "name": "Trails",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MortenHoustonLudvigsen/Trails",
+  "authors": [
+    "Morten Houston Ludvigsen <mlu@2ps.dk>"
+  ],
+  "description": "Yet another javascript routing library",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jasmine": "~2.0.3"
+  }
+}
